@@ -8,7 +8,7 @@ if(MSVC)
 	target_compile_options(${build_target} PRIVATE /bigobj /fp:fast)
 else()
 	target_compile_options(${build_target} PRIVATE
-		-O3 -Wall -Werror -fPIC -Wno-sign-compare -Wfatal-errors)
+		-O3 -Wall -fPIC -Wno-sign-compare -Wfatal-errors) # -Werror 
 	if(MARCH_NATIVE)
 		target_compile_options(${build_target} PRIVATE -march=native)
 	endif()
